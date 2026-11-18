@@ -1,0 +1,21 @@
+{
+  "name":    { "state": "stated", "value": "Shutdown" },
+  "domain":  { "state": "stated", "value": "shutdown.codes" },
+  "chain":   { "state": "stated", "value": "solana", "rpc": "https://solana-rpc.publicnode.com" },
+  "ca":      { "state": "absent", "value": null },
+  "x":       { "state": "stated", "url": "https://x.com/shutdowncoin" },
+  "github":  { "state": "absent", "url": null },
+  "market":  {
+    "state": "stated",
+    "boosts": "https://api.dexscreener.com/token-boosts/top/v1",
+    "tokens": "https://api.dexscreener.com/tokens/v1/solana/{address}",
+    "chainId": "solana",
+    "limit": 10,
+    "pollMs": 60000
+  },
+  "ownSources": {
+    "state": "stated",
+    "dex": "https://api.dexscreener.com/latest/dex/tokens/{ca}",
+    "pump": "https://frontend-api.pump.fun/coins/{ca}"
+  }
+}

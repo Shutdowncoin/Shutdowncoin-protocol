@@ -1,0 +1,31 @@
+/*
+ * TOKENS — the only file in the repo allowed to hold colour literals.
+ * Provenance (sampled from pixels, never invented):
+ *   --color-bg  #000000  brand/LOGO SHUTDOWN JPG.jpg.jpeg  dominant exact pixel (65,653 of 94k sampled); also dominant (rgb 0,0,0) of reference/ banners
+ *   --color-fg  #efefef  brand/LOGO SHUTDOWN PNG.png / PNG...png  dominant opaque pixel (#efefef 9,063 of ~13k glyph samples)
+ *   --color-accent #00ffcc  stated in the project brief (own-token mint pulse); not sampled
+ * Every other tone is a mix of bg/fg, so no extra literal exists.
+ * logo PNG IHDR: 2000x2000, bit depth 8, colortype 6 (RGBA); transparent variant has 87.0% alpha-0 pure-black pixels -> premultiplied resize.
+ */
+:root{
+  color-scheme:dark;
+  --color-bg:#000000;
+  --color-fg:#efefef;
+  --color-accent:#00ffcc;
+  --color-text:var(--color-fg);
+  --color-muted:color-mix(in srgb,var(--color-fg) 56%,var(--color-bg));
+  --color-faint:color-mix(in srgb,var(--color-fg) 38%,var(--color-bg));
+  --color-line:color-mix(in srgb,var(--color-fg) 9%,transparent);
+  --color-line-strong:color-mix(in srgb,var(--color-fg) 22%,transparent);
+  --color-surface:color-mix(in srgb,var(--color-fg) 4%,var(--color-bg));
+  --color-surface-2:color-mix(in srgb,var(--color-fg) 8%,var(--color-bg));
+  --color-spot:color-mix(in srgb,var(--color-fg) 9%,transparent);
+  --color-up:var(--color-accent);
+  --color-down:color-mix(in srgb,var(--color-fg) 62%,var(--color-bg));
+  --color-glow:color-mix(in srgb,var(--color-fg) 30%,transparent);
+  --color-accent-soft:color-mix(in srgb,var(--color-accent) 16%,transparent);
+  --color-accent-none:color-mix(in srgb,var(--color-accent) 0%,transparent);
+  --color-scrim:color-mix(in srgb,var(--color-bg) 78%,transparent);
+  --mono:Consolas,"SFMono-Regular",ui-monospace,monospace;
+  --sans:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+}
